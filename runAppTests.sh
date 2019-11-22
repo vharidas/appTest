@@ -32,6 +32,5 @@ done
 echo "----- ending  ---------"
 if test -f failures.txt
 then
-  date >> failures.txt
   echo "please look at failures.txt for details"
 fi
