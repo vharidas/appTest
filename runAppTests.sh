@@ -1,9 +1,10 @@
-# version 1.4
+# version 1.41
 runTest() {
   local test=$1
   local command=`head -1 $test | tr -d '\r'`
   #echo $command
   sed "1d" $test | tr -d '\r'> expected.txt
+  truncate -s -1 expected.txt
   #cat expected_output.txt
   eval $command &> output.txt
   cmp output.txt expected.txt > /dev/null
