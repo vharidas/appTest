@@ -1,4 +1,4 @@
-# version 1.41
+# version 1.42
 runTest() {
   local test=$1
   local command=`head -1 $test | tr -d '\r'`
